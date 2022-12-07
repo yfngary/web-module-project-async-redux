@@ -8,22 +8,20 @@ const GifList = props => {
     return (
         <div id='GifList'>
             {
-                gifs.map(
-                    gif => {
-                        return(<Gif gif={gif}/>)
-                    }
-                )
+                gifs.map(gif => {
+                    return (<Gif gif={gif} key={gif.id}/>)
+                })
             }
         </div>
     )
 }
 
 const mapStateToProps = state => {
-    return{
+    return {
         gifs: state.gifs,
         loading: state.loading,
         error: state.error
-      }
+    }
 }
 
 export default connect(mapStateToProps)(GifList);

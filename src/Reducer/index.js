@@ -4,7 +4,8 @@ import { FETCH_START, FETCH_SUCCESS } from "../Actions";
 const initialState = {
     gifs: [],
     loading: false,
-    error:''
+    error:'',
+    searchTerm:''
 }
 
 const reducer = (state = initialState, action) => {
